@@ -1,0 +1,41 @@
+# =============================================================================
+# HR Policy Chatbot - Python Dependencies
+# =============================================================================
+# Install all dependencies with:
+#   pip install -r requirements.txt
+
+# --- Web Framework ---
+fastapi>=0.115.0           # Modern Python web framework (fast + easy)
+uvicorn[standard]>=0.30.0  # ASGI server to run FastAPI
+
+# --- Configuration ---
+python-dotenv>=1.0.0       # Load settings from .env file
+pydantic>=2.7.0            # Data validation (used by FastAPI)
+pydantic-settings>=2.3.0   # Load Pydantic models from environment variables
+
+# --- OpenAI (for embeddings + GPT answers) ---
+openai>=1.50.0             # Official OpenAI Python client
+
+# --- Google Drive (for fetching HR documents) ---
+google-auth>=2.30.0              # Google authentication
+google-auth-oauthlib>=1.2.0      # OAuth2 flow for browser login
+google-auth-httplib2>=0.2.0      # HTTP transport for Google auth
+google-api-python-client>=2.150.0 # Google Drive API client
+
+# --- Document Processing ---
+PyPDF2>=3.0.0              # Read text from PDF files
+python-docx>=1.1.0         # Read text from DOCX files
+python-pptx>=1.0.0         # Read text from PowerPoint files (PPTX)
+openpyxl>=3.1.0            # Read text from Excel files (XLSX)
+
+# --- Math (for similarity search) ---
+numpy>=2.0.0               # Fast vector math for cosine similarity (2.x has Python 3.14 wheels)
+
+# --- HTTP Requests ---
+requests>=2.31.0           # Simple HTTP requests (used internally)
+
+# --- Async support ---
+httpx>=0.27.0              # Async HTTP client (used by OpenAI client)
+
+# --- Optional: for better performance ---
+# python-multipart>=0.0.9  # Uncomment if you add file upload endpoints
