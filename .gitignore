@@ -1,0 +1,47 @@
+# =============================================================================
+# HR Policy Chatbot - Git Ignore
+# =============================================================================
+# Files listed here will NEVER be uploaded to GitHub.
+# This protects your API keys, credentials, and generated files.
+
+# --- SECRET FILES (never commit these!) ---
+.env                    # Contains your OpenAI API key
+credentials.json        # Google OAuth credentials
+token.json              # Google OAuth saved login token
+
+# --- DOWNLOADED / GENERATED FILES ---
+backend/temp_documents/ # Documents downloaded from Google Drive
+backend/*.db            # SQLite database files
+backend/hr_policies.db
+
+# --- PYTHON CACHE ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# --- VIRTUAL ENVIRONMENTS ---
+venv/
+env/
+.venv/
+ENV/
+
+# --- IDE / EDITOR ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# --- LOGS ---
+*.log
+/tmp/
+
+# --- NODE (if you add a JS frontend later) ---
+node_modules/
